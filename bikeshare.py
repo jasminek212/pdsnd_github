@@ -187,16 +187,16 @@ def display_data(df):
     
     while True:
         if first_question:        
-            user_choice = input("\nDo you want to see 5 rows of raw data? ").lower()
+            user_choice = input("\nDo you want to see 10 rows of raw data? ").lower()
             first_question = False
         else:
-            user_choice = input("\nDo you want to see 5 more rows of raw data? ").lower()
+            user_choice = input("\nDo you want to see 10 more rows of raw data? ").lower()
             
         if user_choice != 'yes':
             break
             
-        print(df.iloc[start:start + 5])
-        start += 5
+        print(df.iloc[start:start + 10])
+        start += 10
         
         if start >= len(df):
             print("\nNo more data to show.")
