@@ -2,10 +2,13 @@ import time
 import pandas as pd
 import numpy as np
 
+#creates references for different city data
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+
+# Gets user input for their choice of city, month, and day 
 def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -35,7 +38,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
+# Loads the data needed for the user chosen city
 def load_data(city, month, day):
     df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -52,7 +55,7 @@ def load_data(city, month, day):
                                           
     return df
 
-
+# Calculates time and date specific based on user input
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -101,7 +104,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# Get station statistics based on user input
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -124,7 +127,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# Get trip duration statistics based on user input
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -146,7 +149,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# Prints all statistics gathered based on user input
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -181,6 +184,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+# Allows user to choose to run another query 
 def display_data(df):
     start = 0
     first_question = True
@@ -201,7 +205,7 @@ def display_data(df):
         if start >= len(df):
             print("\nNo more data to show.")
             break
-
+# Deploys entire script
 def main():
     while True:
         city, month, day = get_filters()
