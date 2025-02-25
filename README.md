@@ -4,7 +4,7 @@
 This project was create on 02/25/2025
 
 ### Project Title
-Replace the Project Title
+Jasmine Koh Git Final Project
 
 ### Description
 Describe what your project is about and what it does
