@@ -13,7 +13,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input('Would you like to explore data from Chicago, New York City, or Washington? ').lower()
+        city = input('Would you like to explore data from Chicago, New York City, or Washington? (Input is Case Sensitive) ' ).lower()
         if city in CITY_DATA:
             break
         else:
@@ -21,7 +21,7 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month = input('Would you like to explore data from a specific month from Jan - June, or all? ').lower()
+        month = input('Would you like to explore data from a specific month from January - June, or all? ').lower()
         if month in ['january','february','march','april','may','june','all']:
             break
         else:
@@ -65,11 +65,11 @@ def time_stats(df):
     months = ['January', 'February', 'March', 'April', 'May', 'June']
     # TO DO: display the most common month
     common_month= months[df['Month'].mode()[0] -1]
-    print(f"The most common month is {common_month}.")                                   
+    print(f"The most common month is {common_month}!")                                   
 
     # TO DO: display the most common day of week
     common_day= df['DOW'].mode()[0]
-    print(f"The most common day is {common_day}.")  
+    print(f"The most common day is {common_day}!")  
 
     # TO DO: display the most common start hour
     df['Hour'] = df['Start Time'].dt.hour
@@ -191,16 +191,16 @@ def display_data(df):
     
     while True:
         if first_question:        
-            user_choice = input("\nDo you want to see 5 rows of raw data? ").lower()
+            user_choice = input("\nDo you want to see 10 rows of raw data? ").lower()
             first_question = False
         else:
-            user_choice = input("\nDo you want to see 5 more rows of raw data? ").lower()
+            user_choice = input("\nDo you want to see 10 more rows of raw data? ").lower()
             
         if user_choice != 'yes':
             break
             
-        print(df.iloc[start:start + 5])
-        start += 5
+        print(df.iloc[start:start + 10])
+        start += 10
         
         if start >= len(df):
             print("\nNo more data to show.")
