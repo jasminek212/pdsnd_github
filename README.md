@@ -12,7 +12,9 @@ This project will serve as a display of skills and knowledge acquired during the
 The project includes a program that is run on data from Chicago, New York City, and Washington. This program allows the user to query for data on bikeshare users in all three cities. The user is able to query for things like most common stations, average length of bikeshare rides, most common times of usage in a week or in a day.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
