@@ -7,7 +7,7 @@ This project was create on 02/25/2025
 Jasmine Koh Git Final Project
 
 ### Description
-Describe what your project is about and what it does
+This project will serve as a display of skills and knowledge acquired during the course of the Udacity Programming for Data Science Nanodegree
 
 ### Files used
 Include the files used
